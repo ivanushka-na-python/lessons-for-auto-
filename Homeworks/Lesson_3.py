@@ -1,0 +1,2 @@
+integer = "text"
+print (integer)
