@@ -83,14 +83,13 @@
 
 # my_list = [34.565, "text", 54, 43]
 # print (my_list.index("text"))
+
 # # узнать id элемента 
 
 
 # my_list = [34.565, "text", 54, 43]
-# poped = my_list.pop (0)
-# # удаление элемента из списка
-# my_list.pop (0)
-# # запоминаем удаленный элемент из списка 
+# poped = my_list.pop (0) # удаление элемента из списка
+# my_list.pop (0) # запоминаем удаленный элемент из списка
 # print (my_list)
 # print (poped)
 
@@ -123,9 +122,9 @@
 # my_dict = {"first_key" : 1, "second_key" : 2}
 # print (my_dict["first_key"])
 
-my_dict = {"first_key" : 1, "second_key" : 2}
-my_dict ["third_key"] = 3
-# print (my_dict)
-print (my_dict.keys())
-print (my_dict.values())
-print (my_dict.items())
+# my_dict = {"first_key" : 1, "second_key" : 2}
+# my_dict ["third_key"] = 3
+# # print (my_dict)
+# print (my_dict.keys())
+# print (my_dict.values())
+# print (my_dict.items())
