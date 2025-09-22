@@ -71,11 +71,11 @@
 # считая с конца, считаем с 1 
 
 # изменяемые и не изменяемые типы данных: базовые типы данных не изменяемы - они перезаписываемые, а коллекции изменяемы 
-my_list = []
-my_list = list()
-my_list.append (42)
-# добавить в конец
-print(my_list)
+# my_list = [12]
+# my_list = list() Дима засрал этот способ, его не используем 
+# my_list.append(42)
+# # добавить в конец
+# print(my_list)
 
 # my_list = [34.565, "text", 54, 43]
 # print(len(my_list))
@@ -128,3 +128,6 @@ print(my_list)
 # print (my_dict.keys())
 # print (my_dict.values())
 # print (my_dict.items())
+
+
+test_list = [{"key" : "value"}]
