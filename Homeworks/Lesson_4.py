@@ -125,13 +125,13 @@
 # # city = ''
 # # weather = ''
 # my_list = {'city' : 'barnaul', 'weather' : 25, 'city' : 'krasnodar', 'weather' : 30}
-# print(my_list.keys())
-my_dict = {"first_key" : 1, "second_key" : 2}
-my_dict ["third_key"] = 3
-# print (my_dict)
-print (my_dict.keys())
+# # print(my_list.keys())
+# my_dict = {"first_key" : 1, "second_key" : 2}
+# my_dict ["third_key"] = 3
+# # print (my_dict)
+# print (my_dict.keys())
 # print (my_dict.values())
-# print (my_dict.items())
+# print (my_dict.items()) # достаем все подряд
 
 
 # test_list = [{"key" : "value"}]

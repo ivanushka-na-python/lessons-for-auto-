@@ -71,9 +71,9 @@
 # # преобразование строки в коллекцию позволяет работать с каждым элементом строки в отдельности 
 
 # преобразование коллекции в строку 
-languages = ['first_lang', 'second_lang', 'third_lang']
-languages = ''.join (languages) # сначала пишем "разделитель" и потом join
-print (languages)
+# languages = ['first_lang', 'second_lang', 'third_lang']
+# languages = ', '.join (languages) # сначала пишем "разделитель" и потом join
+# print (languages)
 
 # форматироавние строки 
 # a = 'one'
