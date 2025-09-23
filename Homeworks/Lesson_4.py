@@ -84,7 +84,7 @@
 # my_list = [34.565, "text", 54, 43]
 # print (my_list.index("text"))
 
-# # узнать id элемента 
+# # # узнать id элемента 
 
 
 # my_list = [34.565, "text", 54, 43]
@@ -122,12 +122,16 @@
 # my_dict = {"first_key" : 1, "second_key" : 2}
 # print (my_dict["first_key"])
 
-# my_dict = {"first_key" : 1, "second_key" : 2}
-# my_dict ["third_key"] = 3
-# # print (my_dict)
-# print (my_dict.keys())
+# # city = ''
+# # weather = ''
+# my_list = {'city' : 'barnaul', 'weather' : 25, 'city' : 'krasnodar', 'weather' : 30}
+# print(my_list.keys())
+my_dict = {"first_key" : 1, "second_key" : 2}
+my_dict ["third_key"] = 3
+# print (my_dict)
+print (my_dict.keys())
 # print (my_dict.values())
 # print (my_dict.items())
 
 
-test_list = [{"key" : "value"}]
+# test_list = [{"key" : "value"}]

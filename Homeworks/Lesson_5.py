@@ -1,10 +1,10 @@
 # распаковка - распределяем элементы коллекций по разным переменным (исп. только когда знаем точно количество элементов в коллекции)
-my_list = [1, 2]
-my_tuple = (1, 2, 3)
-a, b = my_list
-c, d, e = my_tuple
-print (c, d, e)
-print (a, b)
+# my_list = [1, 2]
+# my_tuple = (1, 2, 3)
+# a, b = my_list
+# c, d, e = my_tuple
+# print(c, d, e)
+# print(a, b)
 
 # # срез - достаем из коллекции опрделенную ее часть 
 # list_1 = [2, 5.4, "text", 88, "number", 66, 98, 43]
@@ -71,9 +71,9 @@ print (a, b)
 # # преобразование строки в коллекцию позволяет работать с каждым элементом строки в отдельности 
 
 # преобразование коллекции в строку 
-# languages = ['first_lang', 'second_lang', 'third_lang']
-# languages = ', '.join (languages) # сначала пишем "разделитель" и потом join
-# print (languages)
+languages = ['first_lang', 'second_lang', 'third_lang']
+languages = ''.join (languages) # сначала пишем "разделитель" и потом join
+print (languages)
 
 # форматироавние строки 
 # a = 'one'
@@ -94,13 +94,13 @@ print (a, b)
 # my_text = 'first word is {0}, second word is {1}' # нужно пронумеровать номер под которым идет вствка из переменных {0} или {1} для этого примера, так же можно перегонять порядковые номера для вставки 
 # print (my_text.format(a, b)) 
 
+# template = 'hello, {}!' # если нужно заготовить шаблон заранее (типо получем данные после шаблона)
+# username = input('What is your name?')
+# print (template.format(username))
+
 # # f-strig
 # my_text = f'first word is {a}, second word is {b}'
 # print (my_text)
-
-# template = 'hello, {}!' # если нужнозаготовить шаблон заранее (типо получем данные после шаблона)
-# username = input('What is your name?')
-# print (template.format(username))
 
 # username = input('What is your name?') # как по мне удобнее и проще так писать
 # template = f'hello, {username}!'
