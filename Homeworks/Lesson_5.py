@@ -105,3 +105,4 @@
 # username = input('What is your name?') # как по мне удобнее и проще так писать
 # template = f'hello, {username}!'
 # print (template)
+

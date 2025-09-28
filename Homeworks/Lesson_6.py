@@ -62,14 +62,14 @@
 #    # name, age = data # это не нужно
 #    print(f'{name} : {age}')
 
-text = 'Привет, как дела, я люблю пить пиво'
-words = text.split()
-find_words = []
-for word in words:
-   if 'а' in word:  
-      # print(word)
-      wordless = word
-   else:
-      (find_words.append(word))
-print(' '.join(find_words))
+# text = 'Привет, как дела, я люблю пить пиво'
+# words = text.split()
+# find_words = []
+# for word in words:
+#    if 'а' in word:  
+#       # print(word)
+#       wordless = word
+#    else:
+#       (find_words.append(word))
+# print(' '.join(find_words))
 
