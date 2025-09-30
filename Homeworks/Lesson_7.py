@@ -112,4 +112,3 @@
 #    for title, price  in kwargs.items():
 #       print(f'Product {title}, price {price}')
 # price_list(iphone=1500, laptop=3000, port=6666)
-
