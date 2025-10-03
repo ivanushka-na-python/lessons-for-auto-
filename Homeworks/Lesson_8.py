@@ -45,7 +45,8 @@ import helper
 helper.assist()
 
 
-from helper import assist as useful
+from helper import assist as useful # не работает 
 helper.useful()
 
 from random import random, randrange, choice # прямой импорт
+# при импорте можно перезаписывать названия функций 
