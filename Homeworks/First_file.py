@@ -13,8 +13,8 @@
 # print(x, y)
 
 # a,b = 2,2
-# print(a == b)
-first = 'первая строка'
-second = 'вторая строка'
-print(first, second, '/')
+# # print(a == b)
+# first = 'первая строка'
+# second = 'вторая строка'
+# print(first, second, '/')
   

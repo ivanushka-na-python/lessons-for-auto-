@@ -30,14 +30,14 @@
 # print (text.endswith("long9")) # заканчивается каким-либо элементом
 
 # some_text = "helLoW, HoW aRe yOU"
-# # print (some_text.capitalize()) # делает первую букву заглавной 
-# # print (some_text.title()) # делает кажду первую букву в слове заглавной 
-# # print (some_text.upper()) # делает все буквы заглавыми 
-# # print (some_text.lower()) # делает все буквы маленькими 
+# # # print (some_text.capitalize()) # делает первую букву заглавной 
+# # # print (some_text.title()) # делает каждую первую букву в слове заглавной 
+# # # print (some_text.upper()) # делает все буквы заглавыми 
+# # # print (some_text.lower()) # делает все буквы маленькими 
 
 # word_index = some_text.lower().index("you")
 # print (some_text[:word_index].lower() + some_text[word_index:].upper()) # делаем сначала весь текст маленьким, находим индекс нужного слова,
-# # а после индекса нужного слова все пишем заглавными 
+# # # а после индекса нужного слова все пишем заглавными 
 
 
 # перезаписывание строки на лету (не изменение)

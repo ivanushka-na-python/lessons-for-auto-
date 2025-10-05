@@ -79,7 +79,7 @@
 
 
 # first_list = [1, 3, 5, "hello", 2.45]
-# first_list [1] = 42
+# # first_list [1] = 42
 # print (first_list[1])
 # считая с конца, считаем с 1 [-1]
 

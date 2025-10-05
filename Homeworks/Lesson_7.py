@@ -96,13 +96,12 @@
 # если указать, возьмется новое значение переданное в аргумент 
 
 # после именновоного аргумента нужно указывать только именнованные аргументы, на позиционные питон будет ругаться 
-# def sum_num(*args): #сколько угодно позиционных параметров могу передавать после * 
-#    # result = 0 
-#    # for numbs in args:
-#    #    result += numbs
-#    # return result # изобрел велосипед
-#    return sum(args) # залупа какая-то 
-# print(sum_num(8, 5, 34))
+def sum_num(*args): #сколько угодно позиционных параметров могу передавать после * 
+   result = 0 
+   for numbs in args:
+      result += numbs
+   return result # изобрел велосипед
+print(sum_num(8, 5, 34))
 
 # def price_list(title, price):
 #    print(f'Product {title}, price {price}')
