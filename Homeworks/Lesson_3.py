@@ -10,6 +10,7 @@
 # b = 49 
 # print (a >= b)
 
+
 # s = 1, 'text', 34
 # a, b, c = s
 # print(a, b, c) 

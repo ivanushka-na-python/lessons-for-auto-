@@ -69,14 +69,14 @@
 # print(list(new_list))
 
 # datetime 
-import datetime
-# time_now = datetime.datetime.now()
-# print(time_now)
-# print(time_now.hour)
+# import datetime
+# # time_now = datetime.datetime.now()
+# # print(time_now)
+# # print(time_now.hour)
 
-# easy_date = datetime.datetime(1960, 1, 15)
-# print(easy_date)
+# # easy_date = datetime.datetime(1960, 1, 15)
+# # print(easy_date)
 
-my_time = '2023/06/01 12 hours, 30 min, 10 secs'
-python_date = datetime.datetime.strptime(my_time, '%Y/%m/%d %H hours, %M mins, %S secs') # ввод даты для питона 
-print(python_date) # тут ошибка 
+# my_time = '2023/06/01 12 hours, 30 min, 10 secs'
+# python_date = datetime.datetime.strptime(my_time, '%Y/%m/%d %H hours, %M mins, %S secs') # ввод даты для питона 
+# print(python_date) # тут ошибка 
