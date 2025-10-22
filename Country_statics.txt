@@ -1,0 +1,4 @@
+{
+"country" : "Russia", 
+"temp" : 20
+}

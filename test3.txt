@@ -1,0 +1,1 @@
+{"country" : "turkey", "temp" : 25, "max_temp" : 40}
