@@ -1,0 +1,4 @@
+{"country" : "turkey", "temp" : 34}
+{"country" : "turkey", "temp" : 34}
+{"country" : "turkey", "temp" : 34}
+{"country" : "turkey", "temp" : 34}
