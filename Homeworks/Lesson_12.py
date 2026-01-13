@@ -104,15 +104,15 @@ print(os.path.dirname(__file__)) # узнаем абсолютный путь к
 # country_turkey2 = CountryData('test2.txt')
 # country_turkey3 = MaxTemp('test3.txt')
 
-# # print(country_russia.country)
-# # print(country_russia.comfort)
-# # print(country_turkey3.max_temp)
-# # # print(country_russia.Country)
-# # # print(country_russia.__data)
-# # # print(country_turkey2.Country)
-# # # print(country_turkey2.data)
-# # # print(country_turkey3.max_temp)
-# # # print(country_turkey3.__comfort)
+# print(country_russia.country)
+# print(country_russia.comfort)
+# print(country_turkey3.max_temp)
+# print(country_russia.Country)
+# print(country_russia.__data)
+# print(country_turkey2.Country)
+# print(country_turkey2.data)
+# print(country_turkey3.max_temp)
+# print(country_turkey3.__comfort)
 
 # # # блять, надо разобраться с приватными именами переменных и методами в классах согласно инкапсуляции
 # # # хуйня какая-то, потому что при подстановке __ к переменным доступ к ним не осуществляется 

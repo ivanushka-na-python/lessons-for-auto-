@@ -137,7 +137,7 @@
 # #     second_list.append(x * 2)
 # # print(second_list)
 
-# second_list = [x * 2 for x in first_list] # средний вариант, лучше будет вариант с for и lambda (2 вариант) 
+# second_list = [x * 2 for x in first_list] # средний вариант, лучше будет вариант с map и lambda (2 вариант) 
 
 # # second_list = map(lambda x: x * 2, first_list) # по идее самый лучший и быстрый вариант перебора элементов коллекции (3 вариант)
 
