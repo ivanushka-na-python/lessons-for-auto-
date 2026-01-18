@@ -8,3 +8,5 @@
 '''update ... set name = 'new_name' where id = 2'''
 
 '''delete from ... where id = 2'''
+
+'''select * from students join books on students.id = books.taken_by_student_id'''
