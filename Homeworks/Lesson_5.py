@@ -78,14 +78,14 @@
 # форматироавние строки 
 # a = 'one'
 # b = 'two'
-# print ('First word is', a, ', second word is', b) # подставляем значение переменных в строку 
+# # print ('First word is', a, ', second word is', b) # подставляем значение переменных в строку 
 
-# # подсатвить значение можно еще через +, но так лучше нее делать 
-# the_text = 'first word is ' + a + ' second word is ' + b
-# print (the_text)
+# # # подсатвить значение можно еще через +, но так лучше нее делать 
+# # the_text = 'first word is ' + a + ' second word is ' + b
+# # print (the_text)
 
-# string format приведены ниже (лучше использовать второй вариант)
-# # лучше вставить значения переменных в строку через {} (опять не рекомендуемый формат оформления):
+# # string format приведены ниже (лучше использовать второй вариант)
+# # # лучше вставить значения переменных в строку через {} (опять не рекомендуемый формат оформления):
 # my_text = 'first word is {}, second word is {}' # порядок вставляемых элементов должен идти в том порядке, в котором идут {} в строке
 # print (my_text.format(a, b)) 
 
@@ -95,7 +95,7 @@
 # print (my_text.format(a, b)) 
 
 # template = 'hello, {}!' # если нужно заготовить шаблон заранее (типо получем данные после шаблона)
-# username = input('What is your name?')
+# username = input('What is your name? ')
 # print (template.format(username))
 
 # # f-strig
