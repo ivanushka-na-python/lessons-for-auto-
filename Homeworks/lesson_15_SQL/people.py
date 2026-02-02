@@ -1,8 +1,5 @@
-from database import connection, cursor
-
-
-def create_people(name, surname):
-   query = f"INSERT INTO people (name, surname) VALUES ('{name}', '{surname}');"
-   cursor.execute(query)
-   connection.commit()
-   connection.close()
+class People:
+   def __init__(self, id, name, surname):
+      self.id = id
+      self.name = name
+      self.surname = surname

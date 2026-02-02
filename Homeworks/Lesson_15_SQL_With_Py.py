@@ -1,18 +1,22 @@
-import mysql.connector as mysql
-import requests
-# fetchall - достает кортежи в списке [{},{}] т.к. он не знает сколько значений достанется, даже если будет только одно 
-# fetchone - достает только один кортеж потому что просим достать только 1 кортеж 
-# курсор хранит данные только последнего запроса, все прошлые перетираются, если не сохранаять их отдельно
+# import mysql.connector as mysql
+# # import requests
+# # fetchall - достает кортежи в списке [{},{}] т.к. он не знает сколько значений достанется, даже если будет только одно 
+# # fetchone - достает только один кортеж потому что просим достать только 1 кортеж 
+# # курсор хранит данные только последнего запроса, все прошлые перетираются, если не сохранаять их отдельно
 
-# Возвращает объект соединения БД
+# # инъекция name Nastya'; --  т.е. основной прикол мы заходим и комментим вторую часть sql скрипта и можно в сам скрипт засунуть дополнительный запрос как напмример дропнуть все таблицы в бд или саму бд 
+# # "hacker', 'hacker@evil.com'); DROP TABLE users; --"
 
-db = mysql.connect( 
-      user = 'root', 
-      passwd = 'PassForData12345',
-      host = 'localhost',
-      port = 3306,
-      database = 'testing_database' 
-)
+
+# # Возвращает объект соединения БД
+
+# db = mysql.connect( 
+#       user = 'root', 
+#       passwd = 'PassForData12345',
+#       host = 'localhost',
+#       port = 3306,
+#       database = 'testing_database' 
+# )
 
 # cursor = db.cursor() 
 
@@ -20,6 +24,9 @@ db = mysql.connect(
 # response = cursor.fetchall() #fetchall - возвращаем ВСЕ что было на запрос выполнить 
 # for i in response: # достаем из бд элементы по индексу колонок (не очень хорошая затея обращаться по индексу)
 #       print(i[2])
+
+# db.close()
+
 
 # ------------------------------------------------------------------------------------------
 
@@ -29,6 +36,9 @@ db = mysql.connect(
 # response = cursor.fetchall() 
 # for human in response:
 #    print(human['surname'])
+
+# db.close()
+
 
 # ------------------------------------------------------------------------------------------
 
@@ -42,6 +52,7 @@ db = mysql.connect(
 # response = cursor.fetchone() # достаем только одно значение 
 # print(response)
 
+# db.close()
 # ------------------------------------------------------------------------------------------
 
 # cursor = db.cursor()
@@ -50,6 +61,7 @@ db = mysql.connect(
 # # cursor.execute(query.format(input('name').strip(), input('surname').strip()))
 # # print(cursor.fetchone())
 
+# db.close()
 
 # ------------------------------------------------------------------------------------------
 # cursor = db.cursor()
@@ -64,15 +76,82 @@ db = mysql.connect(
 # db.close()
 # ------------------------------------------------------------------------------------------
 
-cursor = db.cursor() # защищенный от инъекции код 
+# cursor = db.cursor() # защищенный от инъекции пацанский код 
 
-query = "select * from people where surname = %s and name = %s"
-name = input('name ').strip
-surname = input('surname ').strip
-cursor.execute(query, (surname, name))
-print(cursor.fetchall())
+# name = input('name ').strip()
+# surname = input('surname ').strip()
+# query = "select * from people where name = %s and surname = %s;"
+# cursor.execute(query, (name, surname))
+# print(cursor.fetchall())
 
-db.close()
+# db.close()
 
 # ------------------------------------------------------------------------------------------
 
+# cursor = db.cursor() # инсертаем в таблицу данные, для инсерта нужно коммитнуть обязательно 
+
+# name = input('name ').strip()
+# surname = input('surname ').strip()
+# query = "insert into people (name, surname) values (%s, %s)"
+# cursor.execute(query, (name, surname))
+# db.commit()
+# print(f'Добавлено строк{cursor.rowcount}') # выводим количество добавленных строк  
+# print(f'Id новой записи{cursor.lastrowid}') # выводим id последней добавленной записи 
+
+# db.close()
+
+# # ------------------------------------------------------------------------------------------
+
+# cursor = db.cursor() # выводим по последнему id кортеж, который только добавили 
+
+# name = input('name ').strip()
+# surname = input('surname ').strip()
+# query = "insert into people (name, surname) values (%s, %s)"
+# cursor.execute(query, (name, surname))
+# db.commit()
+# people_id = cursor.lastrowid
+# cursor.execute(f"select * from people where id = {people_id}")
+# print(cursor.fetchone())
+
+# db.close()
+
+# ------------------------------------------------------------------------------------------
+
+# cursor = db.cursor() # при множественной вставке лучше использовать список кортежей 
+
+# values = [
+#    ('Sasha', 'Dub'),
+#    ('Sasha', 'Dubik'), 
+#    ('Ivan ','Morenko')
+# ]
+# query = "insert into people (name, surname) values (%s, %s)"
+# cursor.executemany(query, values) # множественная вставка/множественное выполнение 
+# db.commit()
+# print(f'Добавлено строк{cursor.rowcount}') # выводим количество добавленных строк  
+# print(f'Id новой записи{cursor.lastrowid}') # выведится только последний id записи из пакета 
+
+# db.close()
+
+# ------------------------------------------------------------------------------------------
+
+
+# приколюхи питона match case и walrus 
+# := морж - сравниваем и сразу записываем в переменную 
+# my_num = 100
+
+# while (user_num := int(input('What is your num '))) != my_num:
+#    if user_num > my_num:
+#       print('меньше')
+#    else: 
+#       print('больше')
+
+while True:
+   user_input = input('Something ')
+   match user_input:
+      case 'hello':
+         print('hello')
+      case 'bye':
+         print('bye')
+      case _:
+         print('i dont know')
+         break
