@@ -1,6 +1,7 @@
-# # import os 
+import os 
 # # # print(os.path.dirname(__file__)) # узнаем абсолютный путь к открытой директории
-# # base_path =(os.path.dirname(__file__)) # указываем путь до директории, не зависимо от расположения на компе
+base_path =(os.path.dirname(__file__)) # указываем путь до директории, не зависимо от расположения на компе
+print(base_path)
 # # # file_path = f'{base_path}/Lesson_13.py'
 
 # # # print(base_path)
@@ -43,12 +44,12 @@
 # if __name__ == '__main__': 
 #    main('test4.txt')
 
-# обработчик ошибок
-def calc(x, y):
-   try: 
-      return x / y
-   except ZeroDivisionError:
-      print('нельзя')
+# # обработчик ошибок
+# def calc(x, y):
+#    try: 
+#       return x / y
+#    except ZeroDivisionError:
+#       print('нельзя')
 
 
-print(calc(3, 0))
+# print(calc(3, 0))
