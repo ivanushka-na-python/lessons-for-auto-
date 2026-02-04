@@ -1,6 +1,6 @@
 import mysql.connector as mysql
-# # import requests
-import creds
+# import requests
+import creds # создали отдельный файл с доступами чтобы не заливать их в репозиторий и они были на локалке 
 # # fetchall - достает кортежи в списке [{},{}] т.к. он не знает сколько значений достанется, даже если будет только одно 
 # # fetchone - достает только один кортеж потому что просим достать только 1 кортеж 
 # # курсор хранит данные только последнего запроса, все прошлые перетираются, если не сохранаять их отдельно
@@ -12,11 +12,11 @@ import creds
 # # Возвращает объект соединения БД
 
 db = mysql.connect( 
-      user = creds.user, 
-      passwd = creds.passwd,
-      host = creds.host,
-      port = creds.port,
-      database = creds.database 
+    user = creds.user, 
+    passwd = creds.passwd,
+    host = creds.host,
+    port = creds.port,
+    database = creds.database 
 )
 
 # cursor = db.cursor() 
@@ -31,14 +31,14 @@ db = mysql.connect(
 
 # ------------------------------------------------------------------------------------------
 
-# cursor = db.cursor(dictionary=True) # более читаемый вариант что мы достаем из бд, обращаясь по ключу доставая значение
+cursor = db.cursor(dictionary=True) # более читаемый вариант что мы достаем из бд, обращаясь по ключу доставая значение
 
-# cursor.execute('SELECT * FROM name;') 
-# response = cursor.fetchall() 
-# for human in response:
-#    print(human['surname'])
+cursor.execute('SELECT * FROM people;') 
+response = cursor.fetchall() 
+for human in response:
+   print(human['surname'])
 
-# db.close()
+db.close()
 
 
 # ------------------------------------------------------------------------------------------
@@ -118,20 +118,21 @@ db = mysql.connect(
 
 # ------------------------------------------------------------------------------------------
 
-cursor = db.cursor() # при множественной вставке лучше использовать список кортежей 
+# cursor = db.cursor() # при множественной вставке лучше использовать список кортежей 
 
-values = [
-   ('Sasha', 'Dub'),
-   ('Sasha', 'Dubik'), 
-   ('Ivan ','Morenko')
-]
-query = "insert into people (name, surname) values (%s, %s)"
-cursor.executemany(query, values) # множественная вставка/множественное выполнение 
-db.commit()
-print(f'Добавлено строк{cursor.rowcount}') # выводим количество добавленных строк  
-print(f'Id новой записи{cursor.lastrowid}') # выведится только последний id записи из пакета 
+# values = [
+#    ('Sasha', 'Dub'),
+#    ('Sasha', 'Dubik'), 
+#    ('Ivan ','Morenko')
+# ]
+# query = "insert into people (name, surname) values (%s, %s)"
+# cursor.executemany(query, values) # множественная вставка/множественное выполнение 
+# db.commit()
+# print(f'Добавлено строк{cursor.rowcount}') # выводим количество добавленных строк  
+# print(f'Id новой записи{cursor.lastrowid}') # выведится только последний id записи из пакета 
 
-db.close()
+# db.close()
+
 
 # ------------------------------------------------------------------------------------------
 
