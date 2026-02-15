@@ -1,2 +1,5 @@
 .DS_Store
 creds.py
+.env 
+.pytest_cache
+__pycache__
