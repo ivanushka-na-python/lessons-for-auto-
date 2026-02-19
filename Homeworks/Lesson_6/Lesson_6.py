@@ -49,9 +49,9 @@
 #    print(dict)
 
 # или можно сделать вот так, если надо вытянуть значения из словаря
-# some_dict = {'tom': 34, 'karl': 54, 'ivan': 12}
-# for dict in some_dict:
-#    print(some_dict[dict])
+some_dict = {'tom': 34, 'karl': 54, 'ivan': 12}
+for dict in some_dict:
+   print(some_dict[dict])
 
 # some_dict = {'tom': 34, 'karl': 54, 'ivan': 12}
 # for data in some_dict:
