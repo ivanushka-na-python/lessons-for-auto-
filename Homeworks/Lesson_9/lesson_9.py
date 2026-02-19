@@ -47,14 +47,14 @@
 # print(b)
 
 # # filter 
-# my_list = [1, 7, 12, 9, 5, 10, 54]
-# def is_even(x):
-#    if x % 2 == 0:
-#       return True
-#    else: 
-#       return False
-# new_list = filter(is_even, my_list)
-# print(list(new_list))
+my_list = [1, 7, 12, 9, 5, 10, 54]
+def is_even(x):
+   if x % 2 == 0:
+      return True
+   else:
+      return False
+new_list = filter(is_even, my_list)
+print(list(new_list))
 
 
 # my_list = [1, 7, 12, 9, 5, 10, 54]
